@@ -1,11 +1,15 @@
+
+/**************************************************************
+    Problem: 1814
+    User: premiummina9401
+    Language: Java
+    Result: Success
+    Time:132 ms
+    Memory:9132 kb
+****************************************************************/
+
 import java.util.Scanner;
 
-/*
-1158 : 삽입정렬 
- 
-제한시간: 1Sec    메모리제한: 32mb
-해결횟수: 552회    시도횟수: 897회  
-*/
 public class InsertionSortCount {
 
 	public static void main(String[] args) {

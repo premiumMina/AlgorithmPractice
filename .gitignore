@@ -1,4 +1,7 @@
 .classpath
 .settings/
 .project
-bin/
+/bin/
+
+.DS_Store
+

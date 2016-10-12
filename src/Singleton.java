@@ -2,16 +2,17 @@
  * 싱글톤 클래스
  */
 public class Singleton {
-
-	// 싱글톤 클래스의 유일한 객체를 저장하기 위한 정적 변수
+	// 처음부터 객체를 생성
 	private static Singleton uniqueInstance;
 
 	// 접근지정자
 	private Singleton() {
 	}
-
-	// 싱글톤 클래스의 객체가 이미 있다면 그 객체를 이용하고 아니면 생성
-	public static Singleton getInstance() {
+	
+	/*
+	 * 동기화를 위해 synchronized 키워 사용
+	 */
+	public static synchronized Singleton getInstance() {
 		if (uniqueInstance == null) {
 			uniqueInstance = new Singleton();
 		}

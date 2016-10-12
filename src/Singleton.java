@@ -3,19 +3,24 @@
  */
 public class Singleton {
 	// 처음부터 객체를 생성
-	private static Singleton uniqueInstance;
+	private volatile static Singleton uniqueInstance = new Singleton();
 
 	// 접근지정자
 	private Singleton() {
 	}
-	
+
 	/*
-	 * 동기화를 위해 synchronized 키워 사용
+	 * 객체가 있는지 확인한 후, 동기화 블럭에 들어간다 처음에만 동기화되도록 작
 	 */
-	public static synchronized Singleton getInstance() {
+	public static Singleton getInstance() {
 		if (uniqueInstance == null) {
-			uniqueInstance = new Singleton();
+			synchronized (Singleton.class) {
+				if (uniqueInstance == null) {
+					uniqueInstance = new Singleton();
+				}
+			}
 		}
+
 		return uniqueInstance;
 	}
 

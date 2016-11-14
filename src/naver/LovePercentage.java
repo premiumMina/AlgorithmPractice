@@ -70,7 +70,7 @@ public class LovePercentage {
 		 */
 		int count = 0;
 		while (newSize - count != 2) {
-			for (int i = 0; i < newSize - 1; i++) {
+			for (int i = 0; i < newSize - 1 - count; i++) {
 				result[i] = (result[i] + result[i + 1]) % 10;
 			}
 			count++;

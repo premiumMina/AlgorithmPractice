@@ -22,6 +22,19 @@ public class LovePercentage {
 		case '리':
 			val = 4;
 			break;
+		case '찰' :
+			val = 3;
+			break;
+		case '브' :
+			val = 2;
+			break;
+		case '라' :
+			val = 2;
+			break;
+		case '운' :
+			val = 2;
+			break;
+			
 		}
 		return val;
 	}
@@ -37,11 +50,9 @@ public class LovePercentage {
 		/* 이표화나신리 완료 */
 		String newName = "";
 		for (int idx = 0; idx < A.length(); idx++) {
+			newName = newName + A.substring(idx, idx + 1);
 			if (idx < B.length()) {
-				newName = newName + A.substring(idx, idx + 1);
 				newName = newName + B.substring(idx, idx + 1);
-			} else {
-				newName = newName + A.substring(idx, idx + 1);
 			}
 		}
 
@@ -71,6 +82,6 @@ public class LovePercentage {
 	}
 
 	public static void main(String[] args) {
-		new LovePercentage().calcMC("이화신", "표나리");
+		new LovePercentage().calcMC("찰리브라운", "표나리");
 	}
 }

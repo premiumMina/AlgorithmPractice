@@ -29,7 +29,7 @@ public class CalcCheck {
 	}
 
 	public static void main(String[] args) {
-		String first = "{}[][[]]";
+		String first = "{}}";
 		int input;
 		Stack s = new Stack(first.length());
 		boolean result = true;
@@ -96,6 +96,9 @@ class Stack {
 	}
 
 	public int pop() {
+		if(top <0){
+			return -1;
+		}
 		return stack[top--];
 	}
 

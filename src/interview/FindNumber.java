@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class FindNumber {
 
-	public void twoSum(int[] nums, int target) {
+	public List<Integer> twoSum(int[] nums, int target) {
 
 		List<Integer> result = new ArrayList<Integer>();
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -25,15 +25,14 @@ public class FindNumber {
 				}
 			}
 		}
-		System.out.println(result);
-
+		return result;
 	}
 
 	public static void main(String[] args) {
 		int[] arr = { 2, 7, 11, 15, 6 };
 		int target = 13;
 
-		new FindNumber().twoSum(arr, target);
+		System.out.println(new FindNumber().twoSum(arr, target));
 	}
 
 }

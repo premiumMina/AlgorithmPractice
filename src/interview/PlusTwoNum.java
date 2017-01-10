@@ -13,14 +13,15 @@ class ListNode {
  * output : 7 -> 0 -> 8
  */
 public class PlusTwoNum {
-
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode o1 = l1;
 		ListNode o2 = l2;
 		ListNode result = new ListNode(0);
 		ListNode current = result;
 		int carry = 0;
-
+		
+		String a= "";
+		
 		while (o1 != null || o2 != null) {
 			int val1 = o1.val;
 			int val2 = o2.val;

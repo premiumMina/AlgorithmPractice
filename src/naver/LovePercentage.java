@@ -82,6 +82,6 @@ public class LovePercentage {
 	}
 
 	public static void main(String[] args) {
-		new LovePercentage().calcMC("찰리브라운", "표나리");
+		new LovePercentage().calcMC("이화신", "표나리");
 	}
 }

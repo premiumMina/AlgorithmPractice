@@ -1,38 +1,29 @@
 package interview;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class FindNumber {
 
-	public List<Integer> twoSum(int[] nums, int target) {
+	public int[] twoSum(int[] nums, int target) {
 
-		List<Integer> result = new ArrayList<Integer>();
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-
 		for (int i = 0; i < nums.length; i++) {
+			int one = target - nums[i];
+			if (map.containsKey(one)) {
+				return new int[] { map.get(one), i };
+			}
 			map.put(nums[i], i);
 		}
-		for (int i = 0; i < nums.length; i++) {
-			int one = nums[i];
-			if (map.containsKey(target - one)) {
-				// 중복되지 않도록
-				if (!result.contains(target - one) && !result.contains(i)) {
-					result.add(i);
-					result.add(map.get(target - one));
-				}
-			}
-		}
-		return result;
+
+		throw new IllegalArgumentException("next to");
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 2, 7, 11, 15, 6 };
+		int[] arr = { 2, 7, 11, 15, 16 };
 		int target = 13;
 
-		System.out.println(new FindNumber().twoSum(arr, target));
+		new FindNumber().twoSum(arr, target);
 	}
 
 }

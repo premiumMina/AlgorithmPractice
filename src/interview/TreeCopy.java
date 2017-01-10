@@ -38,7 +38,7 @@ class Tree {
 		/* root에 값이 없으면, root에 값을 넣는다. */
 		if (rootNode == null) {
 			rootNode = new TreeNode(element);
-
+			
 		} else {
 			TreeNode head = rootNode;
 			TreeNode currentNode;

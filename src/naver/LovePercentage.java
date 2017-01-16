@@ -85,3 +85,4 @@ public class LovePercentage {
 		new LovePercentage().calcMC("이화신", "표나리");
 	}
 }
+

@@ -4,34 +4,34 @@ public class LovePercentage {
 	public int len(char word) {
 		int val = 0;
 		switch (word) {
-		case 'ì´':
+		case 'ÀÌ':
 			val = 2;
 			break;
-		case 'í™”':
+		case 'È­':
 			val = 7;
 			break;
-		case 'ì‹ ':
+		case '½Å':
 			val = 4;
 			break;
-		case 'í‘œ':
+		case 'Ç¥':
 			val = 7;
 			break;
-		case 'ë‚˜':
+		case '³ª':
 			val = 3;
 			break;
-		case 'ë¦¬':
+		case '¸®':
 			val = 4;
 			break;
-		case 'ì°°' :
+		case 'Âû' :
 			val = 3;
 			break;
-		case 'ë¸Œ' :
+		case 'ºê' :
 			val = 2;
 			break;
-		case 'ë¼' :
+		case '¶ó' :
 			val = 2;
 			break;
-		case 'ìš´' :
+		case '¿î' :
 			val = 2;
 			break;
 			
@@ -40,14 +40,14 @@ public class LovePercentage {
 	}
 
 	public void calcMC(String A, String B) {
-		/* ë¬¸ì Aë¥¼ ë¬´ì¡°ê±´ ê¸´ ë¬¸ìë¡œ ì •í•˜ê¸° */
+		/* ¹®ÀÚ A¸¦ ¹«Á¶°Ç ±ä ¹®ÀÚ·Î Á¤ÇÏ±â */
 		if (A.length() < B.length()) {
 			String tmp = A;
 			A = B;
 			B = tmp;
 		}
 
-		/* ì´í‘œí™”ë‚˜ì‹ ë¦¬ ì™„ë£Œ */
+		/* ÀÌÇ¥È­³ª½Å¸® ¿Ï·á */
 		String newName = "";
 		for (int idx = 0; idx < A.length(); idx++) {
 			newName = newName + A.substring(idx, idx + 1);
@@ -56,7 +56,7 @@ public class LovePercentage {
 			}
 		}
 
-		/* ê° ì´ë¦„ì˜ ê°’ì„ ê°€ì ¸ì™€ì„œ ë°°ì—´ì— ë„£ëŠ”ë‹¤. */
+		/* °¢ ÀÌ¸§ÀÇ °ªÀ» °¡Á®¿Í¼­ ¹è¿­¿¡ ³Ö´Â´Ù. */
 		int newSize = newName.length();
 		int[] result = new int[newSize];
 		for (int idx = 0; idx < newSize; idx++) {
@@ -65,12 +65,12 @@ public class LovePercentage {
 
 		
 		/*
-		 * ê¸€ìê¸¸ì´ì˜ -2 í•œ ë§Œí¼ ê³„ì‚°ì´ ë°˜ë³µë˜ëŠ” ê²ƒì„ ì•Œì•˜ë‹¤. 
-		 * ì´ ê¸¸ì´ê°€ 7ì´ë¼ë©´ 5ë²ˆì˜ ê³„ì‚°ì„ í†µí•´ì„œ ê¶í•©ì„ êµ¬í•  ìˆ˜ ìˆë‹¤.
+		 * ±ÛÀÚ±æÀÌÀÇ -2 ÇÑ ¸¸Å­ °è»êÀÌ ¹İº¹µÇ´Â °ÍÀ» ¾Ë¾Ò´Ù. 
+		 * ÃÑ ±æÀÌ°¡ 7ÀÌ¶ó¸é 5¹øÀÇ °è»êÀ» ÅëÇØ¼­ ±ÃÇÕÀ» ±¸ÇÒ ¼ö ÀÖ´Ù.
 		 */
 		int count = 0;
 		while (newSize - count != 2) {
-			for (int i = 0; i < newSize - 1 - count; i++) {
+			for (int i = 0; i < newSize - 1; i++) {
 				result[i] = (result[i] + result[i + 1]) % 10;
 			}
 			count++;
@@ -82,7 +82,6 @@ public class LovePercentage {
 	}
 
 	public static void main(String[] args) {
-		new LovePercentage().calcMC("ì´í™”ì‹ ", "í‘œë‚˜ë¦¬");
+		new LovePercentage().calcMC("Âû¸®ºê¶ó¿î", "Ç¥³ª¸®");
 	}
 }
-

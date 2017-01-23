@@ -4,34 +4,34 @@ public class LovePercentage {
 	public int len(char word) {
 		int val = 0;
 		switch (word) {
-		case 'ÀÌ':
+		case 'ì´':
 			val = 2;
 			break;
-		case 'È­':
+		case 'í™”':
 			val = 7;
 			break;
-		case '½Å':
+		case 'ì‹ ':
 			val = 4;
 			break;
-		case 'Ç¥':
+		case 'í‘œ':
 			val = 7;
 			break;
-		case '³ª':
+		case 'ë‚˜':
 			val = 3;
 			break;
-		case '¸®':
+		case 'ë¦¬':
 			val = 4;
 			break;
-		case 'Âû' :
+		case 'ì°°' :
 			val = 3;
 			break;
-		case 'ºê' :
+		case 'ë¸Œ' :
 			val = 2;
 			break;
-		case '¶ó' :
+		case 'ë¼' :
 			val = 2;
 			break;
-		case '¿î' :
+		case 'ìš´' :
 			val = 2;
 			break;
 			
@@ -40,14 +40,14 @@ public class LovePercentage {
 	}
 
 	public void calcMC(String A, String B) {
-		/* ¹®ÀÚ A¸¦ ¹«Á¶°Ç ±ä ¹®ÀÚ·Î Á¤ÇÏ±â */
+		/* ë¬¸ì Aë¥¼ ë¬´ì¡°ê±´ ê¸´ ë¬¸ìë¡œ ì •í•˜ê¸° */
 		if (A.length() < B.length()) {
 			String tmp = A;
 			A = B;
 			B = tmp;
 		}
 
-		/* ÀÌÇ¥È­³ª½Å¸® ¿Ï·á */
+		/* ì´í‘œí™”ë‚˜ì‹ ë¦¬ ì™„ë£Œ */
 		String newName = "";
 		for (int idx = 0; idx < A.length(); idx++) {
 			newName = newName + A.substring(idx, idx + 1);
@@ -56,7 +56,7 @@ public class LovePercentage {
 			}
 		}
 
-		/* °¢ ÀÌ¸§ÀÇ °ªÀ» °¡Á®¿Í¼­ ¹è¿­¿¡ ³Ö´Â´Ù. */
+		/* ê° ì´ë¦„ì˜ ê°’ì„ ê°€ì ¸ì™€ì„œ ë°°ì—´ì— ë„£ëŠ”ë‹¤. */
 		int newSize = newName.length();
 		int[] result = new int[newSize];
 		for (int idx = 0; idx < newSize; idx++) {
@@ -65,8 +65,8 @@ public class LovePercentage {
 
 		
 		/*
-		 * ±ÛÀÚ±æÀÌÀÇ -2 ÇÑ ¸¸Å­ °è»êÀÌ ¹İº¹µÇ´Â °ÍÀ» ¾Ë¾Ò´Ù. 
-		 * ÃÑ ±æÀÌ°¡ 7ÀÌ¶ó¸é 5¹øÀÇ °è»êÀ» ÅëÇØ¼­ ±ÃÇÕÀ» ±¸ÇÒ ¼ö ÀÖ´Ù.
+		 * ê¸€ìê¸¸ì´ì˜ -2 í•œ ë§Œí¼ ê³„ì‚°ì´ ë°˜ë³µë˜ëŠ” ê²ƒì„ ì•Œì•˜ë‹¤. 
+		 * ì´ ê¸¸ì´ê°€ 7ì´ë¼ë©´ 5ë²ˆì˜ ê³„ì‚°ì„ í†µí•´ì„œ ê¶í•©ì„ êµ¬í•  ìˆ˜ ìˆë‹¤.
 		 */
 		int count = 0;
 		while (newSize - count != 2) {
@@ -82,6 +82,6 @@ public class LovePercentage {
 	}
 
 	public static void main(String[] args) {
-		new LovePercentage().calcMC("Âû¸®ºê¶ó¿î", "Ç¥³ª¸®");
+		new LovePercentage().calcMC("ì°°ë¦¬ë¸Œë¼ìš´", "í‘œë‚˜ë¦¬");
 	}
 }

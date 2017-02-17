@@ -19,7 +19,7 @@ public class Q2229 {
 			int max = arr[i];
 			int min = arr[i];
 			for (int j = i - 1; j >= 1; j--) {
-				if (max < arr[j])
+				if (max < arr[j]) 
 					max = arr[j];
 				if (min > arr[j])
 					min = arr[j];

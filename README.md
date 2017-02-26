@@ -47,3 +47,9 @@
 <li><a href="https://github.com/premiumMina/AlgorithmPractice/blob/master/src/acmicpc/Q3109.java">빵집(3109)</a></li>
 <li><a href="https://github.com/premiumMina/AlgorithmPractice/blob/master/src/acmicpc/Q1012.java">유기농배추(1012)</a></li>
 </ul>
+
+
+<b>백트래킹</b>
+<ul>
+<li><a href="https://github.com/premiumMina/AlgorithmPractice/blob/master/src/acmicpc/Q2580.java">스도쿠(2580)</a></li>
+</ul>

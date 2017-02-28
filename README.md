@@ -53,3 +53,9 @@
 <ul>
 <li><a href="https://github.com/premiumMina/AlgorithmPractice/blob/master/src/acmicpc/Q2580.java">스도쿠(2580)</a></li>
 </ul>
+
+
+<b>이분탐색</b>
+<ul>
+<li><a href="https://github.com/premiumMina/AlgorithmPractice/blob/master/src/acmicpc/Q1654.java">랜선자르기(1654)</a></li>
+</ul>

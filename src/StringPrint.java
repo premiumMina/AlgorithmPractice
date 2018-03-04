@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class StringPrint {
-	/* 문자열을 입력받고 출력 후 reverse 함수를 호출, 문자열을 다시 출력 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String input = sc.nextLine();
